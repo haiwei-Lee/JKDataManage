@@ -39,7 +39,7 @@
 - (id)convertedToJson;
 
 /**
- *  当前实体对应的JSON转化为一个实体,默认使用MJExtension
+ *  JSON转化为一个实体,默认使用MJExtension
  *
  *  @param jsonObjc json array or dictionary
  *

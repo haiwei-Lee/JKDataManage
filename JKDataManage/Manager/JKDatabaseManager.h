@@ -16,8 +16,6 @@
 
 + (JKDatabaseManager *)sharedInstance;
 
-@property(nonatomic,strong,readonly)NSArray *tableNames;
-
 
 /**
  *  创建一个表

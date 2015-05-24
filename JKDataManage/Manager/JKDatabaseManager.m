@@ -32,7 +32,6 @@
     self = [super init];
     if (self) {
         self.dataBase = [[YTKKeyValueStore alloc] initDBWithName:@"joke_database.db"];
-        [self createDefaultTable];
     }
     return self;
 }
@@ -43,13 +42,6 @@
         return;
     }
     [self.dataBase createTableWithName:name];
-}
-
-- (void)createDefaultTable
-{
-    [self.tableNames enumerateObjectsUsingBlock:^(NSString *name, NSUInteger idx, BOOL *stop) {
-        [self createTableWithEntityName:name];
-    }];
 }
 
 - (void)saveAObject:(id)jsonObjc withId:(NSString*)objectId intoTable:(NSString*)tableName
