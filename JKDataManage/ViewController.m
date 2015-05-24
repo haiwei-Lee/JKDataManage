@@ -61,8 +61,9 @@
 - (void)saveSingleEntity
 {
     NSMutableArray *datasource = @[].mutableCopy;
-    for (NSInteger i = 0; i < 20; i++) {
-        [Student clearTable];
+    
+    [Student clearTable];
+    for (NSInteger i = 0; i < 30; i++) {
         Student *temp = [[Student alloc]init];
         temp.name = [NSString stringWithFormat:@"学生%ld",i + 100];
         temp.uid = i + 1000;
